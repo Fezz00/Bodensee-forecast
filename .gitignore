@@ -1,0 +1,63 @@
+# --- Secrets: never commit credentials ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+secrets*.json
+*.secret
+
+# --- OS files ---
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# --- Editors / IDEs ---
+.vscode/
+.idea/
+*.swp
+*~
+
+# --- Python ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# --- Data & model artifacts (reproducible or too large for git) ---
+# Note: the Pegelonline archive in data/ can NOT be re-downloaded - back it up separately.
+data/
+models/
+mlruns/
+*.parquet
+*.csv
+*.zip
+
+# --- Terraform (state files can contain secrets) ---
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+.terraform.lock.hcl.bak
+crash.log
+
+# --- Private notes (kept locally, not published) ---
+docs/adr/
+
+# --- Logs ---
+*.log
+logs/
